@@ -1,3 +1,4 @@
+from config import log
 import os
 import concurrent.futures
 import time
@@ -8,9 +9,9 @@ from utils import intensive_task
 
 def stress_test(task_size, duration, report_interval=10, progress_callback=None):
     num_workers = os.cpu_count()
-    print(f"Starting stress test with {num_workers} cores for {duration} seconds...")
+    log(f"Starting stress test with {num_workers} cores for {duration} seconds...")
 
-    # Time and task tracking
+
     end_time = time.time() + duration
     task_count = 0
     start_time = time.perf_counter()
@@ -22,18 +23,18 @@ def stress_test(task_size, duration, report_interval=10, progress_callback=None)
                 results = list(executor.map(intensive_task, tasks))
                 task_count += len(results)
             except Exception as e:
-                print(f"Error encountered during task execution: {e}")
+                log(f"Error encountered during task execution: {e}")
                 continue
             
-            # Progress reporting
+
             if time.time() % report_interval < 1 and progress_callback:
                 elapsed_time = time.perf_counter() - start_time
                 progress_callback(task_count, elapsed_time)
 
     total_time = time.perf_counter() - start_time
     tasks_per_second = task_count / total_time
-    print(f"\nCompleted {task_count} tasks in {total_time:.2f} seconds.")
-    print(f"Performance Metric: {tasks_per_second:.2f} tasks/second")
+    log(f"\nCompleted {task_count} tasks in {total_time:.2f} seconds.")
+    log(f"Performance Metric: {tasks_per_second:.2f} tasks/second")
     return tasks_per_second, task_count, total_time
 
 def start_test(task_size, test_duration, progress_bar, progress_label, start_button, loading_label, task_size_entry, duration_entry, root):
