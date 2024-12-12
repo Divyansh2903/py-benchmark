@@ -31,7 +31,6 @@ A Python-based graphical tool to benchmark your system's CPU performance by runn
     python main.py
 
 
-
 ## Benchmark Comparison Table
 
 This table shows CPU performance on various devices using the benchmarking tool. 
