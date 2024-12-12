@@ -1,4 +1,4 @@
-ENV = "prod" 
+ENV = "dev" 
 
 def log(message):
     """Logs a message if in development environment."""
