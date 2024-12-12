@@ -22,12 +22,12 @@ A Python-based graphical tool to benchmark your system's CPU performance by runn
 ## How to Run
 
 1. Clone the repository:
-  ```bash
-    git clone "https://github.com/Divyansh2903/cpu-stress-test.git"
-    cd cpu-stress-test
+    ```bash
+      git clone "https://github.com/Divyansh2903/cpu-stress-test.git"
+      cd cpu-stress-test
 
 2. Run the program:
-  ```bash
+   ```bash
     python main.py
 
 
