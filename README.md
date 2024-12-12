@@ -22,9 +22,14 @@ A Python-based graphical tool to benchmark your system's CPU performance by runn
 ## How to Run
 
 1. Clone the repository:
-   git clone "https://github.com/Divyansh2903/cpu-stress-test.git"
-   cd cpu-stress-test
-   python3 main.py
+  ```bash
+    git clone "https://github.com/Divyansh2903/cpu-stress-test.git"
+    cd cpu-stress-test
+
+2. Run the program:
+  ```bash
+    python main.py
+
 
 
 ## Benchmark Comparison Table
@@ -34,6 +39,11 @@ This table shows CPU performance on various devices using the benchmarking tool.
 The test was conducted with the following default parameters:
 - **Task Size:** 50,000
 - **Duration:** 120 seconds
+
+## Contribute Your Results
+- Run the benchmark script.
+- Copy the output and paste it into the table below.
+- Open a GitHub issue or submit a pull request with the updated table.
 
 | Device               | CPU                | RAM (GB) | Tasks/sec | Total Tasks |
 |----------------------|--------------------|----------|-----------|-------------|
