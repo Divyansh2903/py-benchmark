@@ -5,7 +5,7 @@ from stress_test import start_test
 def create_gui():
 
     root = tk.Tk()
-    root.title("CPU Stress Testing Tool")
+    root.title("CPU Stress Tool")
 
 
     instructions = tk.Label(root, text="Instructions:\n"
