@@ -5,3 +5,20 @@ __pycache__/
 .DS_Store
 
 dev.py
+
+# Virtual environments / vendored site-packages
+.venv/
+venv/
+.venv-packages/
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build / packaging artifacts
+build/
+dist/
+*.egg-info/
